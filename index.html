@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>markgius.com</title>
+   <style>
+      @media screen and (min-width: 1000px) {
+
+         .content {
+            float: left;
+         }
+
+         #headshot {
+            float: right;
+         }
+
+      }
+      #coolFactBro {
+         font-style: italic;
+      }
+
+      .content {
+         margin: 8px 20px;
+         width: 560px;
+      }
+
+      #intro {
+         text-align: center;
+         font-size: 200%;
+         font-variant: small-caps;
+      }
+
+   </style>
+</head>
+
+<body>
+<div id="everything">
+   <div id="intro">&gt; My name is Mark Gius.</div>
+   <div id="headshot"><img src="images/headshot_small.jpg" alt="Mark Gius at Global Game Jam"></div>
+   <div class="content">
+      I have 
+      <ul>
+         <li>a <a href=http://mgius.github.com/Resume>Resume</a></li>
+         <li>a <a href=http://github.com/mgius/>GitHub</a></li>
+         <li>a <a href=http://www.linkedin.com/in/markgius>LinkedIn</a></li>
+         <li>a <a href=http://twitter.com/markgius>Twitter</a></li>
+      </ul>
+      <p>I like to analyze games in far too much detail.</p>
+      <p id="coolFactBro"></p>
+   </div>
+
+   <script>
+      window.onload = function () {
+         var facts = 
+         ["Final Fantasy XIII is no more linear than most previous games in the " +
+          "series. Its design just makes it seem more linear than previous iterations",
+
+          "Parasite Eve 2 has 5 game modes.  Interestingly enough, the mode " +
+          "that the game claims is second most difficult (Scavenger Mode) is actually " +
+          "harder than the presumably more difficult \"Nightmare Mode.\" The " +
+          "cause of this disparity is that the appearance of more advanced monsters " +
+          "earlier in game in Nightmare Mode cause more useful late-game items to " +
+          "be dropped in additino to increased amounts of experience and cash, " +
+          "allowing your character to become more powerful easily.",
+         ]
+
+         var fact = facts[Math.floor(Math.random()*facts.length)]
+
+         document.getElementById('coolFactBro').innerHTML="For example, " + fact;
+      }
+
+   </script>
+
+</div>
+</body>
+</html>
+

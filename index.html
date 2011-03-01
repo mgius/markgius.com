@@ -5,17 +5,6 @@
    <meta name="viewport" content="width=device-width" />
    <title>markgius.com</title>
    <style>
-      @media screen and (min-width: 1000px) {
-
-         .content {
-            float: left;
-         }
-
-         #headshot {
-            float: right;
-         }
-
-      }
       #coolFactBro {
          font-style: italic;
       }
@@ -33,6 +22,28 @@
 
       .smalltext {
          font-size: 70%;
+      }
+
+      #headshot_tall {
+         display: none;
+      }
+
+      @media screen and (min-width: 1000px) {
+
+         .content {
+            float: left;
+         }
+
+         #headshot {
+            float: right;
+         }
+         #headshot_tall {
+            display: inline;
+         }
+         #headshot_short {
+            display: none;
+         }
+
       }
 
    </style>
@@ -54,7 +65,10 @@
 <body>
 <div id="everything">
    <div id="intro">&gt; My name is Mark Gius</div>
-   <div id="headshot"><img src="images/headshot_small.jpg" alt="Mark Gius at Global Game Jam"></div>
+   <div id="headshot">
+      <img id="headshot_short" src="images/headshot_smaller.jpg" alt="Mark Gius at Global Game Jam">
+      <img id="headshot_tall" src="images/headshot_small.jpg" alt="Mark Gius at Global Game Jam">
+   </div>
    <div class="content">
       I have 
       <ul>
